@@ -19,13 +19,13 @@ This project is a web scraper built using **Playwright** and **Node.js**. It ext
    npm install
    ```
 3. Run the scraper:
-```sh
-node index.js
-```
+   ```sh
+   node index.js
+   ```
 4. Run the Playwright test:
-```sh
-npx playwright test
-```
+   ```sh
+   npx playwright test
+   ```
 ## Project Structure
 📦 hacker-news-scraper  
  ┣ 📂 tests  
