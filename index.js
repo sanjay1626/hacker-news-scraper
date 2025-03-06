@@ -95,7 +95,14 @@ export async function sortHackerNewsArticles() {
     
     
   }
-
+  console.log("✅ Verifying sorting order:");
+  timestamps.forEach((article, i) => {
+    if (i > 0) {
+      console.log(
+        `Comparing: ${timestamps[i - 1].timestamp} (${timestamps[i - 1].parsedTime}) >= ${article.timestamp} (${article.parsedTime})`
+      );
+    }
+  });
   console.log(`Sorting Validation Result: ${sortedCorrectly ? "✅ Sorted" : "❌ Not Sorted"}`);
   
   await browser.close();
