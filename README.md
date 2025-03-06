@@ -46,5 +46,5 @@ This project is licensed under the MIT License.
 ```vbnet
 ✅ **This is clean, simple, and to the point!** 🚀 Let me know if you need any changes! 😊
 ```
-## Company
-DevMonk
+## Copyright
+DevMonk LLC
