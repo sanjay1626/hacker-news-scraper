@@ -33,7 +33,7 @@ function parseHackerNewsTime(timeString) {
       return null;
   }
 
-  console.log(`✅ Converted: "${timeString}" → ${parsedTime}`);
+  //console.log(`✅ Converted: "${timeString}" → ${parsedTime}`);
   return parsedTime;
 }
 
