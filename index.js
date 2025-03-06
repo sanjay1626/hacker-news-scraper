@@ -46,7 +46,7 @@ export async function sortHackerNewsArticles() {
         break;
       }
     }
-  }
+  };
 
   // ✅ Convert timestamps AFTER collecting all 100 articles
   const timestamps = articles.map((article) => ({
@@ -94,4 +94,4 @@ export async function sortHackerNewsArticles() {
   
   await browser.close();
   return sortedCorrectly;
-}
+};
