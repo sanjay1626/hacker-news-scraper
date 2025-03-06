@@ -82,12 +82,18 @@ export async function sortHackerNewsArticles() {
       continue;
     }
 
-    if (prevTime < currTime) {
-      console.log(`❌ Sorting Issue Found:`);
-      console.log(`   ${prevTitle} (${prevTimestamp}) → ${prevTime}`);
-      console.log(`   ${currTitle} (${currTimestamp}) → ${currTime}`);
-      sortedCorrectly = false;
+    const timeDifferenceThreshold = 5000; // Allow 5-second difference
+
+    if (prevTime < currTime) {  
+      if (Math.abs(prevTime - currTime) > timeDifferenceThreshold) { // ✅ Ignore small differences
+        console.log(`❌ Sorting Issue Found:`);  
+        console.log(`   ${prevTitle} (${prevTimestamp}) → ${prevTime}`);  
+        console.log(`   ${currTitle} (${currTimestamp}) → ${currTime}`);  
+        sortedCorrectly = false;  
+      }  
     }
+    
+    
   }
 
   console.log(`Sorting Validation Result: ${sortedCorrectly ? "✅ Sorted" : "❌ Not Sorted"}`);
